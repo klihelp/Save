@@ -24,7 +24,7 @@ More are coming soon!
 ### Login
 To use any API feature, you must me logged in. To log in via the API, use:
 
-    POST /api/index.php
+    POST /index.php
     pass=123
 ### Get links
 
