@@ -1,0 +1,50 @@
+.navbar {
+	border-radius: 0;
+	background-image: url("../assets/bar.png");
+	background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size .5s;
+}
+
+@media (min-width: 768px) {
+	.navbar .navbar-collapse ul, .navbar .navbar-header {
+		transform: none;
+	}
+
+	.navbar.focused .navbar-collapse ul, .navbar.focused .navbar-header {
+		transform: translateX(-100vw);
+		transition: transform 1s;
+	}
+
+	.navbar input, .navbar form div {
+		width: 100% !important;
+	}
+
+	.navbar form {
+		width: 20%;
+		transition: width 1s;
+	}
+
+	.navbar.focused form {
+		width: 100%;
+	}
+
+	#search {
+		position: fixed;
+		left: 5px;	
+		right: 15px;
+		top: 8px;
+		width: 99%;
+		transform: translateY(-200%);
+		transition: transform 1s;
+	}
+
+	#search.active {
+		transform: translateY(0);
+	}
+
+	.navbar.search .navbar-collapse, .navbar.search .navbar-header {
+		transition: transform 1s;
+		transform: translateY(-200%);
+	}
+}

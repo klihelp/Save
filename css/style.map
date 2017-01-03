@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "../scss/style.css",
+	"sources": [
+		"../scss/style.scss",
+		"../scss/_navbar.scss",
+		"../scss/_panel.scss"
+	],
+	"sourcesContent": [
+		"@import \"navbar\";\r\n@import \"panel\";\r\n\r\nbody {\r\n\tdisplay: none;\r\n}",
+		".navbar {\r\n\tborder-radius: 0;\r\n}\r\n\r\n@media (min-width: 768px) {\r\n\t.navbar .navbar-collapse ul, .navbar .navbar-header {\r\n\t\ttransform: none;\r\n\t\ttransition: transform 1s;\r\n\t}\r\n\r\n\t.navbar.focused .navbar-collapse ul, .navbar.focused .navbar-header {\r\n\t\ttransform: translateX(-100vw);\r\n\t}\r\n\r\n\t.navbar input, .navbar form div {\r\n\t\twidth: 100% !important;\r\n\t}\r\n\r\n\t.navbar form {\r\n\t\twidth: 20%;\r\n\t\ttransition: width 1s;\r\n\t}\r\n\r\n\t.navbar.focused form {\r\n\t\twidth: 100%;\r\n\t}\r\n\r\n\t.navbar #search {\r\n\t\tposition: fixed;\r\n\t\tleft: 5px;\r\n\t\tright: 5px;\r\n\t\ttop: 5px;\r\n\t\t\r\n\t}\r\n}",
+		".panel.panel-link {\r\n\ttext-align: center;\r\n\r\n\t.panel-body {\r\n\t\tpadding: 0;\r\n\r\n\t\timg {\r\n\t\t\twidth: 100%;\r\n\t\t}\r\n\t}\r\n}"
+	],
+	"mappings": ";ACAA,AAAA,OAAO,CAAC;EACP,aAAa,EAAE,CAAE;CACjB;;AAED,MAAM,EAAL,SAAS,EAAE,KAAK;;EAChB,AAAyB,OAAlB,CAAC,gBAAgB,CAAC,EAAE,EAAE,AAAQ,OAAD,CAAC,cAAc,CAAC;IACnD,SAAS,EAAE,IAAK;IAChB,UAAU,EAAE,YAAa;GACzB;;EAED,AAAiC,OAA1B,AAAA,QAAQ,CAAC,gBAAgB,CAAC,EAAE,EAAE,AAAgB,OAAT,AAAA,QAAQ,CAAC,cAAc,CAAC;IACnE,SAAS,EAAE,kBAAU;GACrB;;EAED,AAAQ,OAAD,CAAC,KAAK,EAAE,AAAa,OAAN,CAAC,IAAI,CAAC,GAAG,CAAC;IAC/B,KAAK,EAAE,eAAgB;GACvB;;EAED,AAAQ,OAAD,CAAC,IAAI,CAAC;IACZ,KAAK,EAAE,GAAI;IACX,UAAU,EAAE,QAAS;GACrB;;EAED,AAAgB,OAAT,AAAA,QAAQ,CAAC,IAAI,CAAC;IACpB,KAAK,EAAE,IAAK;GACZ;;EAED,AAAQ,OAAD,CAAC,OAAO,CAAC;IACf,QAAQ,EAAE,KAAM;IAChB,IAAI,EAAE,GAAI;IACV,KAAK,EAAE,GAAI;IACX,GAAG,EAAE,GAAI;GAET;;;;ACjCF,AAAM,MAAA,AAAA,WAAW,CAAC;EACjB,UAAU,EAAE,MAAO;CASnB;;;AAVD,AAGC,MAHK,AAAA,WAAW,CAGhB,WAAW,CAAC;EACX,OAAO,EAAE,CAAE;CAKX;;;AATF,AAME,MANI,AAAA,WAAW,CAGhB,WAAW,CAGV,GAAG,CAAC;EACH,KAAK,EAAE,IAAK;CACZ;;;AFLH,AAAA,IAAI,CAAC;EACJ,OAAO,EAAE,IAAK;CACd",
+	"names": []
+}
