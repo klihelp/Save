@@ -65,6 +65,7 @@ View the license [here](https://github.com/krmax44/Save/blob/master/LICENSE).
 
  - Bootstrap *[getbootstrap.com](http://getbootstrap.com)*
  - Bootswatch *[bootswatch.com](http://bootswatch.com)*
+ - Animate.css *[github.io](https://daneden.github.io/animate.css/)*
  - jQuery *[jquery.com](jquery.com)*
  - Font Awesome *[fontawesome.io](http://fontawesome.io)*
  - LazyLoad *[GitHub](https://github.com/tuupola/jquery_lazyload/)*
