@@ -57,15 +57,17 @@ Returns JSON object of just added link, example:
     GET /api/delete.php
     url=2 (ID of link)
 No return value (for now).
-##License
 
-View the license [here](https://github.com/krmax44/Save/blob/master/LICENSE).
+##Changelog
+[CHANGELOG.md](https://github.com/krmax44/Save/blob/master/CHANGELOG.md)
+
+##License
+[LICENSE](https://github.com/krmax44/Save/blob/master/LICENSE)
 
 ## Used open source projects
 
  - Bootstrap *[getbootstrap.com](http://getbootstrap.com)*
  - Bootswatch *[bootswatch.com](http://bootswatch.com)*
- - Animate.css *[github.io](https://daneden.github.io/animate.css/)*
  - jQuery *[jquery.com](jquery.com)*
  - Font Awesome *[fontawesome.io](http://fontawesome.io)*
  - LazyLoad *[GitHub](https://github.com/tuupola/jquery_lazyload/)*
