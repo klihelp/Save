@@ -10,6 +10,10 @@ Save is your personal link saver.
  - PHP permission for `exec()`
 
 To install Save, just download the [latest release](http://github.com/krmax44/Save/releases/latest), upload it to your own server and connect to it with your browser. Enter your MySQL information in the installation wizard, set a password and you're ready.
+
+### Updates
+To update Save, simply upload the unzipped [latest release](http://github.com/krmax44/Save/releases/latest) to your server.
+
 ## Features
 
  - display **screenshot** and **title of website**
