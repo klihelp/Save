@@ -6,8 +6,15 @@
 		exit;
 	}
 	require "config.php";
+
 	if (isset($_POST["pass"])) {
-		$_SESSION["pass"] = $_POST["pass"];
+		if (sha1($_POST["pass"]) == SAVE_PASS) {
+			$_SESSION["pass"] = $_POST["pass"];
+			die("ok");
+		}
+		else {
+			die("error");
+		}
 	}
 
 	if (sha1($_SESSION["pass"]) != SAVE_PASS) {
@@ -24,30 +31,23 @@
 		<link rel="icon" type="image/png" href="assets/icon.png">
 		<meta name="theme-color" content="#2C3E50">
 	</head>
-	<body>
-		<div class="navbar navbar-default" role="navigation">
-	        <div class="navbar-header">
-	        	<a class="navbar-brand" href="#">Save</a>
-	        </div>
-		</div>
-
-		<div class="container row">
-			<div class="col-md-6 col-md-offset-4">
-				<div class="panel panel-primary text-center">
-					<div class="panel-heading">
-						<h3>Login</h3>
+	<body class="login">
+		<div class="container text-center">
+			<div class="inner">
+				<h1>Save</h1>
+				<form onsubmit="return app.login();">
+					<div class="input-group has-feedback">
+						<input type="password" id="pass" placeholder="Password" class="form-control" autofocus>
+						<span class="input-group-btn">
+							<a href="#!" onclick="app.login()" class="btn btn-default">Login</a>
+						</span>
 					</div>
-					<div class="panel-body">
-						<form onsubmit="return app.login();">
-							<input type="password" id="pass" placeholder="Password" class="form-control" autofocus>
-						</form>
-					</div>
-					<div class="panel-footer">
-						<a href="#!" class="btn btn-primary" onclick="app.login()">Login</a>
-					</div>
-				</div>
+				</form>
 			</div>
 		</div>
+
+		<div class="overlay"></div>
+		<div class="overlay2"></div>
 
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -57,16 +57,29 @@
 			var app = {};
 
 			app.login = function () {
-				$("body").fadeOut();
+				$(".overlay").fadeIn();
+				$("body").addClass("loading");
 
 				$.ajax({
 					url: "index.php",
 					type: "POST",
 					data: "pass=" + encodeURIComponent($("#pass").val())
-				}).done(function(){
+				}).done(function(res){
 					setTimeout(function(){
-						window.location.reload();
-					}, 500);
+						if (res == "ok") {
+							$(".overlay2").fadeIn(function(){
+								window.location.reload();
+							});
+						}
+						else {
+							$(".overlay").fadeOut();
+							$("body").removeClass("loading");
+							$(".has-feedback").addClass("has-error").addClass("shake");
+							setTimeout(function(){
+								$(".has-feedback").removeClass("shake").removeClass("has-error");
+							}, 1000);
+						}
+					}, 1000);
 				});
 				return false;
 			};
@@ -106,7 +119,7 @@
 	            <ul class="nav navbar-nav navbar-left">
 	                <li><a href="#!">Home</a></li>
 	                <li><a href="#!" onclick='$("#search").addClass("active").focus(),$(".navbar").addClass("search")'>Search</a>
-	                <li><a href="javascript:var s = document.createElement('script');s.setAttribute('src','<?php echo BASEURL; ?>js/jquery.min.js');document.head.appendChild(s);var s2 = document.createElement('script');s2.setAttribute('src','<?php echo BASEURL; ?>js/add.js');document.head.appendChild(s2);" onclick="return alert('Drag and drop me into your bookmark');">Bookmark</a></li>
+	                <li><a href="javascript:var s = document.createElement('script');s.setAttribute('src','<?php echo BASEURL; ?>js/jquery.min.js');document.head.appendChild(s);var s2 = document.createElement('script');s2.setAttribute('src','<?php echo BASEURL; ?>js/add.js');document.head.appendChild(s2);" onclick="return alert('Drag and drop me into your bookmarks!');">Bookmark</a></li>
 	            </ul>
 	            <form class="navbar-form navbar-right" role="search" onsubmit="return app.add()">
 				  <div class="form-group">
@@ -216,7 +229,7 @@
 					</div>
 					<div class="modal-body text-center">
 						<p>&copy; 2017 krmax44<br>
-						v1.0<br>
+						v1.0.2<br>
 						Released under the MIT License</p>
 						
 						<p><small><a href="https://github.com/krmax44/save" target="_blank">Star me on GitHub</a></small></p>

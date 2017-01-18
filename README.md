@@ -30,6 +30,9 @@ To use any API feature, you must me logged in. To log in via the API, use:
 
     POST /index.php
     pass=123
+
+Returns either `ok` or `error`.
+
 ### Get links
 
     GET /api/get.php
@@ -74,8 +77,9 @@ No return value (for now).
  - Bootswatch *[bootswatch.com](http://bootswatch.com)*
  - jQuery *[jquery.com](jquery.com)*
  - Font Awesome *[fontawesome.io](http://fontawesome.io)*
- - LazyLoad *[GitHub](https://github.com/tuupola/jquery_lazyload/)*
+ - LazyLoad *[github.com](https://github.com/tuupola/jquery_lazyload/)*
  - HideSeek *[staytuned.gr](http://vdw.staytuned.gr)*
  - PhantomJS *[phantomjs.org](http://phantomjs.org)*
  - Lato Font *[latofonts.com](http://latofonts.com)*
  - loading.io *[loading.io](http://loading.io)*
+ - animate.css *[github.com](https://github.com/daneden/animate.css/)*

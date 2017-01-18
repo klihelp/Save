@@ -1,5 +1,8 @@
 # Changelog
 
+##v1.0.2
+ - **new login screen**
+
 ##v1.0.1
  - added caching for title, **significant faster load speed**
 

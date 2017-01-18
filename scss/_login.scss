@@ -1,0 +1,89 @@
+body.login {
+	background-color: $base-color;
+	background-image: url("../assets/icon.png");
+
+	&.loading {
+		animation: background-loading 1s infinite;
+	}
+
+	.text-center {	
+		position: relative;
+		height: 80vh;
+	}
+
+	.inner {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		max-width: 768px;
+	}
+
+	h1 {
+		color: #fff;
+	}
+
+	.form-control:focus {
+		border-color: #cdcdcd;
+	}
+
+	.shake {
+		animation-name: shake;
+		animation-duration: 1s;
+  		animation-fill-mode: both;
+	}
+}
+
+.overlay {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(255, 255, 255, .5);
+	display: none;
+}
+
+.overlay2 {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgb(255, 255, 255);
+	display: none;
+}
+
+@keyframes background-loading {
+	0% {
+		backg-size: auto;
+		background-position: 0px 0px;
+	}
+	50% {
+		background-position: 64px 64px;
+	}
+	100% {
+		background-position: 128px 128px;
+	}
+}
+
+
+/* 
+	Shake animationby Animate.css
+	https://github.com/daneden/animate.css/
+	MIT License
+*/
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
