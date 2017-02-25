@@ -9,6 +9,10 @@ else {
 	include("../../config.php");
 }
 
+if (isset($_GET["pass"])) {
+	$_SESSION["pass"] = $_GET["pass"];
+}
+
 if (sha1($_SESSION["pass"]) != SAVE_PASS) {
 	die("403 Not authorized");
 }
