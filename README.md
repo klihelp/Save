@@ -33,6 +33,8 @@ To use any API feature, you must me logged in. To log in via the API, use:
 
 Returns either `ok` or `error`.
 
+You can also pass `GET pass` with your password everytime you request something, if your application can't handle cookies.
+
 ### Get links
 
     GET /api/get.php
@@ -63,7 +65,7 @@ Returns JSON object of just added link, example:
 
     GET /api/delete.php
     url=2 (ID of link)
-No return value (for now).
+Returns either `ok` or `error`.
 
 ##Changelog
 [CHANGELOG.md](https://github.com/krmax44/Save/blob/master/CHANGELOG.md)
