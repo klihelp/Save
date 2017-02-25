@@ -1,5 +1,8 @@
 # Changelog
 
+##v1.0.3
+ - API changes
+
 ##v1.0.2
  - **new login screen**
 
