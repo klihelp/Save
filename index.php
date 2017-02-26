@@ -229,7 +229,7 @@
 					</div>
 					<div class="modal-body text-center">
 						<p>&copy; 2017 krmax44<br>
-						v1.0.2<br>
+						v1.0.4.1<br>
 						Released under the MIT License</p>
 						
 						<p><small><a href="https://github.com/krmax44/save" target="_blank">Star me on GitHub</a></small></p>
