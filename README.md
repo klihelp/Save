@@ -49,6 +49,8 @@ Returns JSON array of links, example:
 	  }
 	]
 
+If you want to get the URL for the screenshot and the title directly, add `GET m=1`. This will become standard in the future.
+
 ### Add link
 
     GET /api/push.php
