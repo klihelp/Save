@@ -1,6 +1,10 @@
 # Changelog
 
-##v1.0.3
+##v1.0.4.1
+ - API changes
+ - Bug fixes
+
+##v1.0.4
  - API changes
 
 ##v1.0.2
